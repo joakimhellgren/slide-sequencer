@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		1464FB57262A247B008F94A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464FB42262A247B008F94A8 /* ContentView.swift */; };
 		1464FB58262A247B008F94A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1464FB43262A247B008F94A8 /* Assets.xcassets */; };
 		1464FB59262A247B008F94A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1464FB43262A247B008F94A8 /* Assets.xcassets */; };
+		1464FB66262A251E008F94A8 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1464FB65262A251E008F94A8 /* AudioKit */; };
+		1464FB82262AFD22008F94A8 /* Shaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464FB81262AFD22008F94A8 /* Shaker.swift */; };
+		1464FB83262AFD22008F94A8 /* Shaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464FB81262AFD22008F94A8 /* Shaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,7 @@
 		1464FB50262A247B008F94A8 /* touchSlide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touchSlide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1464FB52262A247B008F94A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1464FB53262A247B008F94A8 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		1464FB81262AFD22008F94A8 /* Shaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1464FB66262A251E008F94A8 /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				1464FB41262A247B008F94A8 /* touchSlideApp.swift */,
+				1464FB81262AFD22008F94A8 /* Shaker.swift */,
 				1464FB42262A247B008F94A8 /* ContentView.swift */,
 				1464FB43262A247B008F94A8 /* Assets.xcassets */,
 			);
@@ -106,6 +112,9 @@
 			dependencies = (
 			);
 			name = "touchSlide (iOS)";
+			packageProductDependencies = (
+				1464FB65262A251E008F94A8 /* AudioKit */,
+			);
 			productName = "touchSlide (iOS)";
 			productReference = 1464FB48262A247B008F94A8 /* touchSlide.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +162,9 @@
 				Base,
 			);
 			mainGroup = 1464FB3B262A247A008F94A8;
+			packageReferences = (
+				1464FB64262A251E008F94A8 /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
 			productRefGroup = 1464FB49262A247B008F94A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1464FB56262A247B008F94A8 /* ContentView.swift in Sources */,
+				1464FB82262AFD22008F94A8 /* Shaker.swift in Sources */,
 				1464FB54262A247B008F94A8 /* touchSlideApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1464FB57262A247B008F94A8 /* ContentView.swift in Sources */,
+				1464FB83262AFD22008F94A8 /* Shaker.swift in Sources */,
 				1464FB55262A247B008F94A8 /* touchSlideApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +453,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1464FB64262A251E008F94A8 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit";
+			requirement = {
+				branch = "v5-main";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1464FB65262A251E008F94A8 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1464FB64262A251E008F94A8 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1464FB3C262A247A008F94A8 /* Project object */;
 }
