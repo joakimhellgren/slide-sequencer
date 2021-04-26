@@ -11,7 +11,7 @@ import AudioKit
 class SeqViewModel: ObservableObject {
     
     let engine = AudioEngine()
-    let shaker = RhodesPianoKey()
+    let instrument = RhodesPianoKey()
     var callbackInst = CallbackInstrument()
     let mixer = Mixer()
     var sequencer = Sequencer()
@@ -34,38 +34,41 @@ class SeqViewModel: ObservableObject {
         for beat in 0 ..< data.timeSignatureTop {
             selectedTrack.sequence.add(noteNumber: MIDINoteNumber(beat), position: Double(beat), duration: 0.1)
         }
-        
     }
     
-
+    private func configureSequencer() {
+        let fader = Fader(instrument)
+        fader.gain = 10.0
+        
+        let _ = sequencer.addTrack(for: instrument)
+        mixer.addInput(fader)
+    }
     
-    init() {
-       
-        let fader = Fader(shaker)
-        
-        fader.gain = 20.0
-        
-        let _ = sequencer.addTrack(for: shaker)
-        
+    private func configureCallbackInstrument() {
         callbackInst = CallbackInstrument(midiCallback: { (_, beat, _) in
             self.data.currentBeat = Int(beat)
             for track in 0 ..< self.data.trackSignature.count {
                 let currentPos = Int(self.sequencer.tracks[track].currentPosition.rounded())
                 let timeSign = self.data.trackSignature[track]
+                
                 if currentPos == timeSign {
                     self.sequencer.tracks[track].rewind()
                     print("rewinded track: \(track)")
                 }
-               
             }
         })
         
         let _ = sequencer.addTrack(for: callbackInst)
-        updateSequence(note: 0, velocity: 100, position: 0, track: 0)
+        mixer.addInput(callbackInst)
+    }
+    
+    init() {
+        configureSequencer()
+        configureCallbackInstrument()
+        
+        updateSequence(note: 0, velocity: 50, position: 0, track: 0)
         sequencer.tracks[0].clear()
         
-        mixer.addInput(fader)
-        mixer.addInput(callbackInst)
         engine.output = mixer
         
         for _ in 1 ..< data.timeSignatureTop {
@@ -81,7 +84,7 @@ class SeqViewModel: ObservableObject {
                 track.length = Double(data.trackSignature[index])
             }
         }
-
+        
     }
     
     func start() {

@@ -14,7 +14,6 @@ enum StepType: CaseIterable {
 struct SeqView: View {
     @ObservedObject var conductor = SeqViewModel()
     @State var isMuted = [false]
-    //@State var sequences: [[NoteEventSequence]] = [[]]
     @State var stepType: StepType = .trig
     
     var body: some View {
@@ -47,7 +46,6 @@ struct SeqView: View {
                 Slider(value: setTempo, in: 60.0 ... 620.0)
                 Text("\(Int(tempo))")
             } // MARK: HStack
-            
         } // MARK: VStack
         .onAppear { self.conductor.start() }
         .onDisappear { self.conductor.stop() }
