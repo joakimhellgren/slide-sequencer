@@ -9,7 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ShakerView().padding(.horizontal)
+        NavigationView {
+            SeqView()
+                .navigationTitle("Channel 1")
+        } // Navigation View
+        .overlay(
+            ZStack {
+                // Loading screen
+                
+            } // ZStack
+        )
     }
 }
 

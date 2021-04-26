@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140D2EB62637104A0058B529 /* PitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D2EB52637104A0058B529 /* PitchView.swift */; };
 		1464FB54262A247B008F94A8 /* touchSlideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464FB41262A247B008F94A8 /* touchSlideApp.swift */; };
 		1464FB55262A247B008F94A8 /* touchSlideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464FB41262A247B008F94A8 /* touchSlideApp.swift */; };
 		1464FB56262A247B008F94A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464FB42262A247B008F94A8 /* ContentView.swift */; };
@@ -14,11 +15,16 @@
 		1464FB58262A247B008F94A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1464FB43262A247B008F94A8 /* Assets.xcassets */; };
 		1464FB59262A247B008F94A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1464FB43262A247B008F94A8 /* Assets.xcassets */; };
 		1464FB66262A251E008F94A8 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1464FB65262A251E008F94A8 /* AudioKit */; };
-		1464FB82262AFD22008F94A8 /* Shaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464FB81262AFD22008F94A8 /* Shaker.swift */; };
-		1464FB83262AFD22008F94A8 /* Shaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464FB81262AFD22008F94A8 /* Shaker.swift */; };
+		14A4937626371EE4006CDDC0 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14A4937526371EE4006CDDC0 /* AudioKit */; };
+		14A4938626371FC2006CDDC0 /* VeloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A4938526371FC2006CDDC0 /* VeloView.swift */; };
+		14A4938A26372029006CDDC0 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A4938926372029006CDDC0 /* StepView.swift */; };
+		14A4938E263724D3006CDDC0 /* SeqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A4938D263724D3006CDDC0 /* SeqView.swift */; };
+		14A4939426372593006CDDC0 /* SeqData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A4939326372593006CDDC0 /* SeqData.swift */; };
+		14A4939A263725B1006CDDC0 /* SeqViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A49399263725B1006CDDC0 /* SeqViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		140D2EB52637104A0058B529 /* PitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchView.swift; sourceTree = "<group>"; };
 		1464FB41262A247B008F94A8 /* touchSlideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = touchSlideApp.swift; sourceTree = "<group>"; };
 		1464FB42262A247B008F94A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1464FB43262A247B008F94A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -27,7 +33,11 @@
 		1464FB50262A247B008F94A8 /* touchSlide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touchSlide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1464FB52262A247B008F94A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1464FB53262A247B008F94A8 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		1464FB81262AFD22008F94A8 /* Shaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shaker.swift; sourceTree = "<group>"; };
+		14A4938526371FC2006CDDC0 /* VeloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeloView.swift; sourceTree = "<group>"; };
+		14A4938926372029006CDDC0 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
+		14A4938D263724D3006CDDC0 /* SeqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeqView.swift; sourceTree = "<group>"; };
+		14A4939326372593006CDDC0 /* SeqData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeqData.swift; sourceTree = "<group>"; };
+		14A49399263725B1006CDDC0 /* SeqViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeqViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,12 +53,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A4937626371EE4006CDDC0 /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		140D2EB4263710260058B529 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				140D2EB52637104A0058B529 /* PitchView.swift */,
+				14A4938526371FC2006CDDC0 /* VeloView.swift */,
+				14A4938926372029006CDDC0 /* StepView.swift */,
+				14A4938D263724D3006CDDC0 /* SeqView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1464FB3B262A247A008F94A8 = {
 			isa = PBXGroup;
 			children = (
@@ -56,14 +78,17 @@
 				1464FB4A262A247B008F94A8 /* iOS */,
 				1464FB51262A247B008F94A8 /* macOS */,
 				1464FB49262A247B008F94A8 /* Products */,
+				14A4937426371EE4006CDDC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		1464FB40262A247B008F94A8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				14A4939226372579006CDDC0 /* Model */,
+				14A4939126372560006CDDC0 /* ViewModel */,
+				140D2EB4263710260058B529 /* View */,
 				1464FB41262A247B008F94A8 /* touchSlideApp.swift */,
-				1464FB81262AFD22008F94A8 /* Shaker.swift */,
 				1464FB42262A247B008F94A8 /* ContentView.swift */,
 				1464FB43262A247B008F94A8 /* Assets.xcassets */,
 			);
@@ -94,6 +119,29 @@
 				1464FB53262A247B008F94A8 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		14A4937426371EE4006CDDC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		14A4939126372560006CDDC0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				14A49399263725B1006CDDC0 /* SeqViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		14A4939226372579006CDDC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14A4939326372593006CDDC0 /* SeqData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +180,9 @@
 			dependencies = (
 			);
 			name = "touchSlide (macOS)";
+			packageProductDependencies = (
+				14A4937526371EE4006CDDC0 /* AudioKit */,
+			);
 			productName = "touchSlide (macOS)";
 			productReference = 1464FB50262A247B008F94A8 /* touchSlide.app */;
 			productType = "com.apple.product-type.application";
@@ -200,8 +251,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1464FB56262A247B008F94A8 /* ContentView.swift in Sources */,
-				1464FB82262AFD22008F94A8 /* Shaker.swift in Sources */,
+				140D2EB62637104A0058B529 /* PitchView.swift in Sources */,
+				14A4938A26372029006CDDC0 /* StepView.swift in Sources */,
+				14A4939426372593006CDDC0 /* SeqData.swift in Sources */,
 				1464FB54262A247B008F94A8 /* touchSlideApp.swift in Sources */,
+				14A4938626371FC2006CDDC0 /* VeloView.swift in Sources */,
+				14A4938E263724D3006CDDC0 /* SeqView.swift in Sources */,
+				14A4939A263725B1006CDDC0 /* SeqViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +266,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1464FB57262A247B008F94A8 /* ContentView.swift in Sources */,
-				1464FB83262AFD22008F94A8 /* Shaker.swift in Sources */,
 				1464FB55262A247B008F94A8 /* touchSlideApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +522,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		1464FB65262A251E008F94A8 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1464FB64262A251E008F94A8 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+		14A4937526371EE4006CDDC0 /* AudioKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1464FB64262A251E008F94A8 /* XCRemoteSwiftPackageReference "AudioKit" */;
 			productName = AudioKit;
